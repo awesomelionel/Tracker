@@ -1,0 +1,6 @@
+Version 0.1
+This basic application has the few basic function:
+1. Able to create tickets, track tickets and group them in projects
+2. Access control for users. 
+3. Allows users to upload files to individual tickets
+4. Tag the tickets that would be easy to find.
