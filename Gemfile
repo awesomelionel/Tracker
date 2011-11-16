@@ -18,6 +18,29 @@ end
 
 gem 'jquery-rails'
 
+group :test, :development do
+	gem 'rspec-rails', '~> 2.5'
+end
+
+group :test do
+	gem 'cucumber-rails'
+	gem 'capybara'
+	gem 'database_cleaner'
+	gem 'factory_girl'
+
+	#Testing email
+	gem 'email_spec'
+end
+
+# Authentication
+gem 'devise', '~> 1.4.3'
+
+# Can or Not?
+gem 'cancan'
+
+# Attachements
+gem 'paperclip'
+
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 

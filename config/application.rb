@@ -9,6 +9,8 @@ if defined?(Bundler)
   # Bundler.require(:default, :assets, Rails.env)
 end
 
+Bundler.require(:default, Rails.env) if defined?(Bundler)
+
 module Tracker
   class Application < Rails::Application
     # Settings in config/environments/* take precedence over those specified here.
