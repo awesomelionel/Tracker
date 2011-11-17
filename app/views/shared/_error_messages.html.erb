@@ -1,0 +1,17 @@
+<% if object.errors.any? %>
+	<div class="alert-message block-message warning">
+		<p>
+		<%= pluralize(object.errors.count, "error") %>
+		prohibited this <%= object.class.to_s.underscore.humanize.downcase %>
+		from being saved:
+		</p>
+		<dl>
+			<dt>There were problems with the following fields: </dt>
+			<% object.errors.full_messages.each do |message| %>
+				<li><%= message %></li>
+			<% end %>
+		</dl>
+	</div>
+
+<% end %>
+

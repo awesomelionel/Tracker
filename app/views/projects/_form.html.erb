@@ -1,6 +1,16 @@
-<%= form_for(@project) do |f| %> <p>
-	<%= f.label :name %>
-	<%= f.text_field :name %> </p>
-	<%= f.submit %>
-<% end %>
-
+<div class="row">
+	<div class="span16">
+		<%= form_for(@project, :html => { :class => "form-stacked" }) do |f| %>
+			<div class="row">
+				<div class="span-two-third">
+					<%= render 'shared/error_messages', :object => f.object %>
+				</div>
+			</div>
+			<p>
+			<%= f.label :name%>
+			<%= f.text_field :name %> 
+			</p>
+			<%= f.submit %>
+		<% end %>
+	</div>
+</div>

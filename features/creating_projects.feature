@@ -5,11 +5,16 @@ Feature: Creating projects
 
 	Background: Projects page
 		Given I am on the projects page
+		When I follow "New Project"
 
 	Scenario: Creating a project 
-		When I follow "New Project" 
-		And I fill in "Name" with "Tracker" 
+		When I fill in "Name" with "Digg" 
 		And I press "Create Project"
 		Then I should see "Project has been created."
-		And I visit webpage for "Tracker"
-		And I should see "Tracker"
+		And I visit webpage for "Digg"
+		And I should see "Digg"
+
+	Scenario: Creating a project without a name
+		When I press "Create Project"
+		Then I should see "Project has not been created."
+		And I should see "Name can't be blank"

@@ -1,1 +1,8 @@
 <%= link_to "Create New Project", new_project_path, :class => "btn primary large" %>
+
+<h2> Projects </h2>
+<ul>
+	<% @project.each do |project| %>
+		<li><%= link_to project.name, project %></li>
+	<%end%>
+</ul>
