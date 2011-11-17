@@ -11,4 +11,5 @@ Feature: Creating projects
 		And I fill in "Name" with "Tracker" 
 		And I press "Create Project"
 		Then I should see "Project has been created."
-
+		And I visit webpage for "Tracker"
+		And I should see "Tracker"

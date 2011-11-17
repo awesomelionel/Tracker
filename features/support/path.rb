@@ -8,17 +8,15 @@ module NavigationHelpers
   def path_to(page_name)
     case page_name
 
-	when /home/
-		root_path
 
-	when /homepage/
-		root_path
+	when /home\s?page/
+		'/'
 
 	when /project/
 		projects_path
 
-    when /the project page for "([^\"]*)"/
-      project_path(Project.find_by_name!($1))
+    when /project page for "(.+)"/
+      pages_projects_path(Project.find_by_name!($1))
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:
     #
