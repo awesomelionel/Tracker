@@ -1,14 +1,27 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Tracker</title>
-  <%= stylesheet_link_tag    "application" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+	<head>
+		<title><%= title %></title>
+		<%= stylesheet_link_tag    "application" %>
+		<%= javascript_include_tag "application" %>
+		<%= csrf_meta_tags %>
+	</head>
+	<body>
 
-<%= yield %>
+		<div class="topbar">
+			<div class="fill">
+				<div class="container">
+					<%= render 'layouts/header' %>
+				</div>
+			</div>
+		</div>
+		<div class ="container">
+			<div class="hero-unit">
+				<%= yield %>
+			</div>
 
-</body>
+			<%= render 'layouts/footer' %>
+			<%= debug(params) if Rails.env.development? %>
+		</div>
+	</body>
 </html>
