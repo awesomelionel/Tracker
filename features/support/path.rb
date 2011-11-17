@@ -1,5 +1,3 @@
-
-
 module NavigationHelpers
   # Maps a name to a path. Used by the
   #
@@ -10,8 +8,14 @@ module NavigationHelpers
   def path_to(page_name)
     case page_name
 
-    when /the home\s?page/
-      '/'
+	when /home/
+		root_path
+
+	when /homepage/
+		root_path
+
+	when /project/
+		projects_path
 
     when /the project page for "([^\"]*)"/
       project_path(Project.find_by_name!($1))

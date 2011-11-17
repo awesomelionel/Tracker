@@ -3,8 +3,10 @@ Feature: Creating projects
 	As a user 
 	I want to create them easily
 
+	Background: Projects page
+		Given I am on the projects page
+
 	Scenario: Creating a project 
-		Given I am on the homepage 
 		When I follow "New Project" 
 		And I fill in "Name" with "Tracker" 
 		And I press "Create Project"
