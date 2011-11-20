@@ -14,6 +14,7 @@ Feature: Creating Tickets
 		And I fill in "Description" with "I need more karma"
 		And I press "Create Ticket"
 		Then I should see "Ticket has been created."
+		Then I should see "Need more upvotes" within "#ticket h2"
 
 	Scenario: Creating a ticket without valid attributes
 		When I press "Create Ticket"
