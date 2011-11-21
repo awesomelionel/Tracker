@@ -4,12 +4,15 @@ Feature: Viewing tickets
 	I want to see them on that project's page
 
 	Background:
-		Given there is a project called "Digg"
-		And that project has a ticket:
+		Given there are the following users:
+			|	email			 	|	password	|
+			|	user@tracker.com	| 	password	|
+		And there is a project called "Digg"
+		And "user@tracker.com" has created a ticket for this project:
 			| title				|	description						|
 			| Fix User Login  	|	Add Authentication				|
 		And there is a project called "Reddit"
-		And that project has a ticket:
+		And "user@tracker.com" has created a ticket for this project:
 			| title					| 	description		|
 			| Standards compliance	|	Isn't a joke.	|		
 		And I am on the projects page

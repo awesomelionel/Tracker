@@ -5,9 +5,17 @@ Feature: Creating Tickets
 
 	Background:
 		Given there is a project called "Reddit"
+		And there are the following users:
+			|	email			 	|	password	|
+			|	user@tracker.com	| 	password	|
 		And I am on the projects page
 		When I follow "Reddit"
 		And I follow "New Ticket"
+		Then I should see "You need to sign in or sign up before continuing."
+		When I fill in "Email" with "user@tracker.com"
+		And I fill in "Password" with "password"
+		And I press "Sign in"
+		Then I should see "New Ticket"
 
 	Scenario: Creating a ticket
 		When I fill in "Title" with "Need more upvotes"
@@ -15,6 +23,7 @@ Feature: Creating Tickets
 		And I press "Create Ticket"
 		Then I should see "Ticket has been created."
 		Then I should see "Need more upvotes" within "#ticket h2"
+		Then I should see "Created by user@tracker.com"
 
 	Scenario: Creating a ticket without valid attributes
 		When I press "Create Ticket"
