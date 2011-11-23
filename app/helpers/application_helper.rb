@@ -12,5 +12,5 @@ module ApplicationHelper
 			"#{base_title} | #{@ticket.title}"
 		end
 	end
-
 end
+

@@ -7,6 +7,7 @@ Feature: Viewing tickets
 		Given there are the following users:
 			|	email			 	|	password	|
 			|	user@tracker.com	| 	password	|
+		And I am signed in as them
 		And there is a project called "Digg"
 		And "user@tracker.com" has created a ticket for this project:
 			| title				|	description						|

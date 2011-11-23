@@ -9,7 +9,7 @@ Feature: Viewing the Homepage
 		And I should see "About"
 		And I should see "Contact"
 		And I should see "Help"
-		And I should see "Projects"
+		#And I should see "Projects"
 
 	Scenario: Visiting the Home Page
 		When I follow "Home"
@@ -26,8 +26,8 @@ Feature: Viewing the Homepage
 	Scenario: Visiting the Help Page
 		When I follow "Help"
 		Then I should be on the help page
-
-	Scenario: Visiting the Projects Page
-		When I follow "Projects"
-		Then I should be on the project page
+		
+		#	Scenario: Visiting the Projects Page
+		#		When I follow "Projects"
+		#		Then I should be on the project page
 			
