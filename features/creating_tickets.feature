@@ -8,14 +8,10 @@ Feature: Creating Tickets
 		And there are the following users:
 			|	email			 	|	password	|
 			|	user@tracker.com	| 	password	|
+		And I am signed in as them
 		And I am on the projects page
 		When I follow "Reddit"
 		And I follow "New Ticket"
-		Then I should see "You need to sign in or sign up before continuing."
-		When I fill in "Email" with "user@tracker.com"
-		And I fill in "Password" with "password"
-		And I press "Sign in"
-		Then I should see "New Ticket"
 
 	Scenario: Creating a ticket
 		When I fill in "Title" with "Need more upvotes"

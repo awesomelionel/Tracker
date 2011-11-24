@@ -2,16 +2,15 @@ Feature: Viewing projects
 	In order to assign tickets to a project
 	As a user
 	I want to be able to see a list of available projects
-	#
-	#	Background: 
-	#		Given there are the following users:
-	#			|	email			|	password	|
-	#			|	user@ticketee.com	|	password	|
-	#		And I am signed in as them
-	#		And there is a project called "TextMate 2"
-	#		And there is a project called "Internet Explorer"
-	#		And "user@ticketee.com" can view the "TextMate 2" project
-	#
+
+	Background: 
+		Given there are the following users:
+			|	email			|	password	|
+			|	user@tracker.com	|	password	|
+		And I am signed in as them
+		And there is a project called "Digg"
+		And there is a project called "Reddit"
+
 	Scenario: Listing all projects
 		Given there is a project called "Digg"
 		And I am on the projects page
