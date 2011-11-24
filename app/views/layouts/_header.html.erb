@@ -11,7 +11,8 @@
   <% end%>
 </ul>
 <% if user_signed_in? %>
-  <p class="pull-right">Logged in as <a href= '#'><%= current_user.email %></a>
+  <p class="pull-right">Logged in as 
+  <%= link_to  current_user %> 
   <%= link_to "Sign out", destroy_user_session_path, :class => "active" %>
   </p>
 <% else %>

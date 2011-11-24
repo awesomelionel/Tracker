@@ -26,4 +26,12 @@ Feature: Creating Users
 		Then I should see "User has not been created."
 		And I should see "Email can't be blank"
 
+	Scenario: Creating an admin user
+		When I fill in "Email" with "newadmin@tracker.com"
+		And I fill in "Password" with "password"
+		And I check "Is an admin?"
+		And I press "Create User"
+		Then I should see "User has been created"
+		And I should see "newadmin@tracker.com (Admin)"
+
 
