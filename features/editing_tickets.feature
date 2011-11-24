@@ -9,6 +9,7 @@ Feature: Editing Tickets
 			|	user@tracker.com	| 	password	|
 		And I am signed in as them
 		And there is a project called "Digg"
+		And "user@tracker.com" can view the "Digg" project
 		And "user@tracker.com" has created a ticket for this project:
 			| title				|	description						|
 			| Fix User Login  	|	Add Authentication				|

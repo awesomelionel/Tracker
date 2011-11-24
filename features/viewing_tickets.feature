@@ -9,10 +9,12 @@ Feature: Viewing tickets
 			|	user@tracker.com	| 	password	|
 		And I am signed in as them
 		And there is a project called "Digg"
+		And "user@tracker.com" can view the "Digg" project
 		And "user@tracker.com" has created a ticket for this project:
 			| title				|	description						|
 			| Fix User Login  	|	Add Authentication				|
 		And there is a project called "Reddit"
+		And "user@tracker.com" can view the "Reddit" project
 		And "user@tracker.com" has created a ticket for this project:
 			| title					| 	description		|
 			| Standards compliance	|	Isn't a joke.	|		

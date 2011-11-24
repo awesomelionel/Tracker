@@ -10,9 +10,10 @@ Feature: Viewing projects
 		And I am signed in as them
 		And there is a project called "Digg"
 		And there is a project called "Reddit"
+		And "user@tracker.com" can view the "Digg" project
 
 	Scenario: Listing all projects
-		Given there is a project called "Digg"
 		And I am on the projects page
+		Then I should not see "Reddit"
 		When I follow "Digg"
 		Then I should see "Digg"

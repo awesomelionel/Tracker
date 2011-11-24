@@ -8,6 +8,7 @@ Feature: Creating Tickets
 		And there are the following users:
 			|	email			 	|	password	|
 			|	user@tracker.com	| 	password	|
+			And "user@tracker.com" can view the "Reddit" project
 		And I am signed in as them
 		And I am on the projects page
 		When I follow "Reddit"
