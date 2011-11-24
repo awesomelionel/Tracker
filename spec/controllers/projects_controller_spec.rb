@@ -1,11 +1,7 @@
 require 'spec_helper'
 
 describe ProjectsController do
-  let(:user) do
-    user = Factory(:user)
-    user
-  end
-
+  let(:user) {create_user!} 
   let(:project) { Factory(:project) }
   context "standard users" do
 #    it "cannot access the new action" do

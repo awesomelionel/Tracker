@@ -1,0 +1,10 @@
+<h2>Users Admininstration Page</h2>
+<p>Here you can create new users.</p>
+<p><%= link_to "New User", new_admin_user_path, :class => "btn primary"%>
+</p>
+<ul>
+  <strong>List of Users:</strong>
+  <% @users.each do |user| %>
+    <li><%= link_to user, [:admin, user] %> </li>
+  <% end %>
+</ul>
