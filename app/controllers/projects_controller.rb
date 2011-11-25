@@ -8,7 +8,7 @@ class ProjectsController < ApplicationController
     :destroy]
 
   def index
-    @project = Project.all
+    @project = Project.for(current_user).all
   end
 
   def new

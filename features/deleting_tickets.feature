@@ -10,6 +10,7 @@ Feature: Deleting Tickets
 		And I am signed in as them
 		Given there is a project called "Digg"
 		And "user@tracker.com" can view the "Digg" project
+		And "user@tracker.com" can delete tickets in the "Digg" project
 		And "user@tracker.com" has created a ticket for this project:
 			| title				|	description						|
 			| Fix User Login  	|	Add Authentication				|
