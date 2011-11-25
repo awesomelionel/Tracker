@@ -106,3 +106,7 @@ Then /^(?:|I )should see \/([^\/]*)\/$/ do |regexp|
     assert page.has_xpath?('//*', :text => regexp)
   end
 end
+
+Then /^show me the page$/ do
+  save_and_open_page
+end
