@@ -39,8 +39,7 @@ gem 'devise', '~> 1.4.3'
 gem 'cancan'
 
 # Attachements
-gem 'paperclip'
-
+gem "paperclip", :git => "http://github.com/thoughtbot/paperclip.git"
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
