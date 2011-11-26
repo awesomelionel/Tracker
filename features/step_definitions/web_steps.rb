@@ -107,11 +107,10 @@ Then /^(?:|I )should see \/([^\/]*)\/$/ do |regexp|
   end
 end
 
-<<<<<<< HEAD
 When /^(?:|I )attach the file "([^"]*)" to "([^"]*)"$/ do |path, field|
   attach_file(field, File.expand_path(path))
-=======
+end
+
 Then /^show me the page$/ do
   save_and_open_page
->>>>>>> 5c1fae9
 end

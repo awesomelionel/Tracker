@@ -192,12 +192,8 @@ DEPENDENCIES
   email_spec
   factory_girl
   jquery-rails
-<<<<<<< HEAD
-  paperclip!
-=======
   launchy
-  paperclip
->>>>>>> 5c1fae9
+  paperclip!
   rails (= 3.1.1)
   rspec-rails (~> 2.5)
   sass-rails (~> 3.1.4)
