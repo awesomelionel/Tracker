@@ -4,4 +4,6 @@ class Ticket < ActiveRecord::Base
   has_attached_file :asset
   validates :title, :presence => true 
   validates :description, :presence => true, :length => {:minimum => 10}
+  
+  has_many :comments
 end

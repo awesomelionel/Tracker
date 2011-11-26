@@ -30,6 +30,9 @@ group :test do
 
 	#Testing email
 	gem 'email_spec'
+
+	#Changing ticket's state
+	gem 'launchy'
 end
 
 # Authentication

@@ -16,6 +16,11 @@ Tracker::Application.routes.draw do
   resources :projects do
     resources :tickets
   end
+
+  resources :tickets do
+    resources :comments
+  end
+
   match '/contact', :to => 'pages#contact'
   match '/about',   :to => 'pages#about'
   match '/help',    :to => 'pages#help'

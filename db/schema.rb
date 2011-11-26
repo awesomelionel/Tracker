@@ -11,7 +11,11 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(:version => 20111125144549) do
+=======
+ActiveRecord::Schema.define(:version => 20111125173954) do
+>>>>>>> 5c1fae9
 
   create_table "assets", :force => true do |t|
     t.string   "asset_file_name"
@@ -22,6 +26,17 @@ ActiveRecord::Schema.define(:version => 20111125144549) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+<<<<<<< HEAD
+=======
+
+  create_table "comments", :force => true do |t|
+    t.text     "text"
+    t.integer  "ticket_id"
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+>>>>>>> 5c1fae9
 
   create_table "permissions", :force => true do |t|
     t.integer  "user_id"
